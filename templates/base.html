@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% comment %} {% load static %} {% endcomment %}
+    {% comment %} <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    <script type="text/javascript" src="{% static 'js/vue.js' %}"></script>     {% endcomment %}
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <script type="text/javascript" src="/static/js/vue.js"></script>
+</head>
+<body>
+    {% block content %}
+    <!-- 准备一个容器 -->
+    <div id="root">
+        <h1>hello</h1> 
+    </div>
+    {% endblock %}
+
+    {% block page %}
+        <div>
+            <a href="" data-ajax='false'>首页</a>
+            <a href="" data-ajax='false'>上一页</a>
+            <a href="" data-ajax='false'>上一页</a>
+            <a href="" data-ajax='false'>末页</a>
+        </div>
+    {% endblock %}
+
+    {% block vue %}
+
+    {% endblock %}
+</body>
+</html>

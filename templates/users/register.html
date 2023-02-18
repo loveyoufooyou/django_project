@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    注册
+{% endblock %}
+
+
+{% block content %}
+
+    <div>
+        <form action="/users/register/" method="post">
+            {% csrf_token %}
+            昵称：<input type="text" name="username"><br>
+            密码：<input type="password" name="password"><br>
+            手机号：<input type="text" minlength="11" maxlength="11" name="phone"><br>
+            <input type="submit" value="点击注册" />
+        </form>
+
+    </div>
+{% endblock %}
+
+{% block vue %}
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        new Vue({
+            el:'#root',
+            data:{
+                name:'尚硅谷' 
+            }
+        })
+    </script>
+{% endblock %}
+
